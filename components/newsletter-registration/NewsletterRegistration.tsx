@@ -33,10 +33,10 @@ const NewsletterRegistration = () => {
           </div>
           <div className="absolute inset-0 flex justify-center items-center">
             <div className="flex flex-col items-center text-center text-white p-7">
-              <h1 className="font-bold text-3xl mb-2 uppercase">
+              <h1 className="font-bold sm:text-3xl mb-2 uppercase">
                 Subscribe to our Newsletter
               </h1>
-              <p className="text-sm mb-4 w-96">
+              <p className="hidden sm:flex sm:text-sm mb-4 w-96">
                 Sign up to our newsletter and be the first to know about new
                 products, events, and special offers.
               </p>

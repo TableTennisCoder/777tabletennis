@@ -32,10 +32,10 @@ const HeroSection = () => {
               }}
             >
               <div className="m-7 w-5/6">
-                <h1 className="text-white font-bold lg:text-5xl mb-4 md:text-4xl text-3xl">
+                <h1 className="text-white text-2xl font-bold lg:text-5xl mb-4 md:text-4xl sm:text-3xl">
                   Ranking Stakes Set for First WTT Grand Smash of 2024
                 </h1>
-                <p className="text-sm mb-4">
+                <p className="hidden text-sm mb-4 sm:flex md:text-base lg:text-sm">
                   Singapore Smash 2024 is almost here, and with it comes a whole
                   lot of ITTF Table Tennis World Ranking points. With 2000pts
                   sitting up top for the champions, the time is ripe to make
