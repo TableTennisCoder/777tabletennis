@@ -16,7 +16,7 @@ import { handleGoogleLogin, handleCredentialsLogin } from "@/lib/authActions";
 
 import { useForm } from "react-hook-form";
 
-import { ILoginResponse, IFormData, IFormErrors } from "@/lib/types";
+import { ILoginResponse, IFormData } from "@/types/types";
 
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);

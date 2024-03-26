@@ -3,10 +3,11 @@ import { Button } from "../ui/button";
 import NavLink from "./NavLink";
 import { navLinks } from "./navLinks.js";
 
+// ADD BETTER TYPE HERE
 import { TSession } from "@/types/types";
 import { handleLogout } from "@/lib/authActions";
 
-const Links = ({ session }: { session: TSession | null }) => {
+const Links = ({ session }: { session: any }) => {
   return (
     <nav className="mx-5 hidden items-center space-x-2 lg:space-x-3 md:flex">
       {navLinks.map((link) => (

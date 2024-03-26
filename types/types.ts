@@ -15,7 +15,9 @@ export type WeeklyNewsProps = {
 };
 
 export type TUserSession = {
+  name?: string;
   email?: string;
+  image?: string;
   user_id?: string;
   isAdmin?: boolean;
   isAuthor?: boolean;
@@ -26,3 +28,13 @@ export type TSession = {
   user: TUserSession;
   expires: string;
 };
+
+export interface ILoginResponse {
+  error?: string;
+  success?: boolean;
+}
+
+export interface IFormData {
+  email: string;
+  password: string;
+}
