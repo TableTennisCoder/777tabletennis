@@ -3,9 +3,7 @@
 import { useState } from "react";
 import { Editor } from "novel";
 import type { SyntheticEvent } from "react";
-import type { Editor as TiptapEditor } from "@tiptap/core";
 
-import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import {
@@ -21,7 +19,7 @@ import {
 const CreateNewArticle = () => {
   const [content, setContent] = useState<string>();
 
-  const handleOnUpdate = (editor: TiptapEditor) => {
+  const handleOnUpdate = (editor: any) => {
     setContent(editor.getHTML());
   };
 
