@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Header from "@/components/navbar/Header";
 import Footer from "@/components/footer/Footer";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,8 +35,12 @@ export default function RootLayout({
         }}
       >
         <Header />
-        <main className="overflow-x-hidden">{children}</main>
-        <Footer />
+        <main className="overflow-x-hidden">
+          <ThemeProvider attribute="class" defaultTheme="dark">
+            {children}
+          </ThemeProvider>
+        </main>
+        {/* <Footer /> */}
       </body>
     </html>
   );

@@ -1,11 +1,16 @@
+"use client";
+
 import React from "react";
-import RichTextEditor from "@/components/richt-text-editor/RichTextEditor";
+import Container from "@/components/ui/Container";
+import CreateNewArticle from "@/components/CreateNewArticle/CreateNewArticle";
 
 const page = () => {
   return (
-    <div className="mt-8 mb-28">
-      <RichTextEditor />
-    </div>
+    <Container>
+      <div className="mt-8 mb-28 mx-5">
+        <CreateNewArticle />
+      </div>
+    </Container>
   );
 };
 

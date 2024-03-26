@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import Container from "../ui/Container";
@@ -10,8 +8,13 @@ import MobileLinks from "./MobileLinks";
 
 import Logo from "../../public/777.png";
 import { Menu } from "lucide-react";
+import { auth } from "@/lib/auth";
 
-const Header = () => {
+const Header = async () => {
+  const session = await auth();
+
+  console.log("SESSION", session);
+
   return (
     <header className="sm:flex sm:justify-between border-b border-borderColor bg-background sticky top-0 z-50 backdrop-filter backdrop-blur-lg bg-opacity-50">
       <Container>
@@ -32,7 +35,7 @@ const Header = () => {
               </div>
             </SheetContent>
           </Sheet>
-          <Links />
+          <Links session={session} />
         </div>
       </Container>
     </header>
