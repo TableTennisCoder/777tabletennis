@@ -135,7 +135,7 @@ const LoginForm = () => {
 
       <div className="flex items-center justify-center mt-6">
         <span className="text-textGray text-sm">
-          Don't have an account?{" "}
+          Don&apos;st have an account?{" "}
           <Link href="/signup" className="underline text-white">
             Sign Up Now
           </Link>
