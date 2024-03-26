@@ -16,6 +16,8 @@ import { handleGoogleLogin, handleCredentialsLogin } from "@/lib/authActions";
 
 import { useForm } from "react-hook-form";
 
+import { ILoginResponse, IFormData, IFormErrors } from "@/lib/types";
+
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [loginError, setLoginError] = useState<string | null>();
@@ -27,12 +29,12 @@ const LoginForm = () => {
     formState: { errors, isSubmitting },
     reset,
     getValues,
-  } = useForm();
+  } = useForm<IFormData>();
 
   // submit the form and register the user if inputs are correct
   const onSubmit = async (data: any) => {
     try {
-      const result = await handleCredentialsLogin(data);
+      const result: ILoginResponse | void = await handleCredentialsLogin(data);
 
       console.log(result);
 
@@ -135,7 +137,7 @@ const LoginForm = () => {
 
       <div className="flex items-center justify-center mt-6">
         <span className="text-textGray text-sm">
-          Don't have an account?{" "}
+          Don&apos;st have an account?{" "}
           <Link href="/signup" className="underline text-white">
             Sign Up Now
           </Link>

@@ -10,3 +10,13 @@ export interface UserType {
   registration_date: string;
   user_id: string;
 }
+
+export interface ILoginResponse {
+  error?: string;
+  success?: boolean;
+}
+
+export interface IFormData {
+  email: string;
+  password: string;
+}

@@ -4,13 +4,20 @@ import bcrypt from "bcrypt";
 import { signIn, signOut } from "@/lib/auth.js";
 import { checkIfUserExists, createNewUser } from "@/lib/auth.js";
 
+interface LoginResponse {
+  error?: string;
+  success?: boolean;
+}
+
 // handle login with Google
 export const handleGoogleLogin = async () => {
   await signIn("google");
 };
 
 // handle login with credentials (email & password)
-export const handleCredentialsLogin = async (formData: FormData) => {
+export const handleCredentialsLogin = async (
+  formData: any
+): Promise<LoginResponse | void> => {
   const { email, password } = formData;
   try {
     await signIn("credentials", { email, password });
@@ -28,7 +35,7 @@ export const handleLogout = async () => {
 };
 
 // handle registration
-export const handleRegistration = async (formData: FormData) => {
+export const handleRegistration = async (formData: any) => {
   const { username, email, password, passwordRepeat } = formData;
 
   if (password !== passwordRepeat) {
